@@ -67,9 +67,6 @@ class Connection extends \yii\redis\Connection
      */
     public function getConnectionString()
     {
-        Yii::warning($this->unixSocket, 'getConnectionString');
-        Yii::warning($this->hostname, 'getConnectionString');
-        Yii::warning($this->port, 'getConnectionString');
         if ($this->unixSocket) {
             return 'unix://' . $this->unixSocket;
         }
